@@ -2,12 +2,21 @@
   "extends": "@micra/typescript-config/base",
   "compilerOptions": {
     "declaration": true,
+    "skipLibCheck": true,
     "emitDeclarationOnly": true,
-    "types": ["vitest/globals"],
+    "types": [
+      "vitest/globals"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
+  ]
 }

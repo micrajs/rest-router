@@ -1,6 +1,6 @@
 {
   "name": "@micra/rest-router",
-  "version": "0.0.0",
+  "version": "0.1.0-next.0",
   "description": "Micra's REST router extension.",
   "repository": {
     "type": "git",
@@ -10,6 +10,19 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/micrajs/community/issues?q=is:issue+is:open+label:%22Project:+rest-router%22+label:%22Type:+fix%22"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./*": "./*",
+    "./ServiceProvider": {
+      "import": "./ServiceProvider.mjs",
+      "require": "./ServiceProvider.js",
+      "types": "./ServiceProvider.d.ts"
+    }
   },
   "scripts": {
     "build:code": "vite build --config .viterc.ts",
@@ -28,6 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@micra/commit-lint-config": "next",
+    "@micra/core": "0.1.0-next.19",
     "@micra/eslint-config": "next",
     "@micra/typescript-config": "next",
     "@micra/vite-config": "next",
@@ -44,5 +58,9 @@
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
     "vitest": "^0.6.1"
+  },
+  "dependencies": {
+    "@micra/request-handler": "0.1.0-next.6",
+    "@micra/router": "0.1.0-next.9"
   }
 }

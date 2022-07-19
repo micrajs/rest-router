@@ -4,9 +4,14 @@ import {cwd} from '@micra/vite-config/utilities/cwd';
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: [],
+      external: [
+        '@micra/request-handler/utilities',
+        '@micra/router',
+        '@micra/core',
+      ],
       input: {
         index: cwd('index.ts'),
+        ServiceProvider: cwd('./ServiceProvider.ts'),
       },
     },
   },
